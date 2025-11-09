@@ -1,0 +1,174 @@
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+:root {
+  --bg-employee: beige;
+  --bg-btn: #1591dd;
+  --bg-grey: rgba(128, 128, 128, 0.158);
+  --btn-color: white;
+  --bg-darkgrey: grey;
+}
+
+#app {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-btn,
+.btn {
+  background-color: var(--bg-btn);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  color: var(--btn-color);
+  width: 100px;
+  border: none;
+  outline: none;
+}
+.header-btn:hover,
+.btn:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.employee {
+  background-color: var(--bg-employee);
+  display: flex;
+  border: 1px solid black;
+  height: 60dvh;
+  gap: 5px;
+  /* overflow: hidden; */
+}
+
+.employee-data {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 5px;
+  flex: 1;
+}
+
+.employee-data > h3,
+.employee-info > h3 {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 1px solid black;
+  width: 70%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.employee-info-single {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  overflow-y: scroll;
+}
+
+.employee-info-single img {
+  max-width: 100%;
+  width: 100px;
+  height: 100px;
+}
+.employee-list-item {
+  background-color: var(--bg-grey);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-list-item.selected {
+  background-color: var(--bg-darkgrey);
+}
+
+.employee-list-item .edit {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.employee-list-item .delete ,
+.employee-list-item .edit {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.employee-list-item .delete:hover,
+.employee-list-item .edit:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.employee-list-item:hover {
+  cursor: pointer;
+}
+
+.employee-modal {
+  text-align: center;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.387);
+  overflow: scroll;
+}
+
+.employee-modal-form {
+  padding: 30px;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.employee-modal-form input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.064);
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.employee-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}

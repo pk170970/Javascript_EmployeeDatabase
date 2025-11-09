@@ -1,0 +1,52 @@
+<!DOCTYPE html lang='en'>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width:device-width, initial-scale: 1.0">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>Employee Database Management</h1>
+        <button class="header-btn">Add Employee</button>
+      </header>
+      <div class="employee">
+        
+        <div class="employee-data">
+          <h3>Employee List</h3>
+          <div class="employee-list">
+              <!-- dynamically injecting the data  -->
+          </div>
+        </div>
+        
+        <div class="employee-info">
+          <h3>Employee Infomation</h1>
+            <div class="employee-info-single">
+              <!-- dynamically injecting the data  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="employee-modal" role="dialog" aria-modal="true" hidden>
+        <form class="employee-modal-form">
+          <h3>Add a new Employee</h3>
+          <div class="employee-name">
+            <input name="firstName" type="text" placeholder="Enter your first name" class="name-input">
+            <input name="lastName" type="text" placeholder="Enter your last name" class="name-input">
+          </div>
+          <input name="imageUrl" placeholder="Place your image url (optional)" type="text" class="employee-img">
+          <input name="email" placeholder="Email" type="email" required class="employee-email">
+          <input name="contactNumber" placeholder="contact number" type="number" class="employee-contact">
+          <input name="salary" type="number" class="employee-salary" placeholder="Salary">
+          <input name="address" type="text" class="employee-address" placeholder="Address">
+          <input name="dob" type="date" class="employee-dob" required placeholder="DOB">
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <script src="./index.mjs" type="module"></script>
+    </body>
+    </html>
+    
